@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Cite the URL and commit for this interim snapshot; cite papers separately."
+title: "PEMFC Domain PINN: Interim Results and Diagnostic Study"
+type: software
+authors:
+  - family-names: Cha
+    given-names: Yohan
+version: 0.1.0
+repository-code: "https://github.com/powerfulsmooth/pemfc-domain-pinn"

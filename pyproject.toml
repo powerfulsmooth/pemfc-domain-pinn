@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pemfc-domain-pinn"
+version = "0.1.0"
+description = "Interim multi-domain PINN diagnostics and independent public training scaffold"
+requires-python = ">=3.10"
+dependencies = ["torch>=2.1,<3", "numpy>=1.24,<3"]
+
+[project.optional-dependencies]
+test = ["pytest>=7,<10"]
+plots = ["matplotlib>=3.7,<4"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

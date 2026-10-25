@@ -1,0 +1,188 @@
+{
+  "snapshot_prepared_on": "2026-10-25",
+  "status": "interim_diagnostic_snapshot_not_converged",
+  "date_semantics": "Documentation preparation date, not inception or inferred experiment date.",
+  "model": {
+    "spatial_dimensions": 3,
+    "material_tags": 11,
+    "experts": 3,
+    "common_pointwise_readout": 1,
+    "trainable_parameters": 13247,
+    "dtype": "float64"
+  },
+  "historical_main_branch": {
+    "initial_stage": "200 updates: data plus N2-related physics",
+    "joint_updates_before_block": 2,
+    "additional_joint_updates": 40,
+    "total_updates": 242,
+    "alpha_start": 0.002,
+    "alpha_end": 0.042,
+    "gradient_clipped_steps_in_block": 40,
+    "rejected_steps": 0,
+    "converged": false
+  },
+  "paired_trial": {
+    "common_start": "separate data-only 200-update control",
+    "A_updates": 10,
+    "B_updates": 10,
+    "learning_rate": 0.0001,
+    "alpha_sequence": [
+      0.001,
+      0.002,
+      0.003,
+      0.004,
+      0.005,
+      0.006,
+      0.007,
+      0.008,
+      0.009,
+      0.01
+    ],
+    "same_start_model_and_Adam_state": true,
+    "matched_sample_plans": true,
+    "A": "Original physics coefficients equal to one.",
+    "B": "Positive fixed downweights calibrated once; not MultiAdam or adaptive balancing.",
+    "observations": {
+      "start": {
+        "validation_equal_tag_normalized_MSE": 0.00878934193122635,
+        "MEM_phi_p_RMS_mV": 10.819661959946972,
+        "MEM_lambda_RMS": 1.2078645364816891,
+        "MEM_N2_RMS": 0.030465686479867533,
+        "CCL_O2_RMS": 0.036564725604678036,
+        "membrane_reconstructed_current_RMS_A_m2": 6015.687612511158,
+        "CGC_all1000_original_water_loss": 1302832.8821033237,
+        "CCL_MEM_N2_flux_jump_RMS_kg_m2_s": 1.485273973721729,
+        "fixed_original_physics": {
+          "PDE": 1093806.8847593488,
+          "BC": 0.3078541466731694,
+          "interface": 756383005.8320593,
+          "data": 0.01204612060022426
+        }
+      },
+      "A_final": {
+        "validation_equal_tag_normalized_MSE": 0.009201517207873712,
+        "MEM_phi_p_RMS_mV": 10.822305998122848,
+        "MEM_lambda_RMS": 1.2398403210029927,
+        "MEM_N2_RMS": 0.03904169157976449,
+        "CCL_O2_RMS": 0.03698537675241802,
+        "membrane_reconstructed_current_RMS_A_m2": 5884.405178058028,
+        "CGC_all1000_original_water_loss": 281825.3369928605,
+        "CCL_MEM_N2_flux_jump_RMS_kg_m2_s": 0.6905621549236899,
+        "fixed_original_physics": {
+          "PDE": 215786.16557564042,
+          "BC": 0.2929816947748215,
+          "interface": 164930586.27333963,
+          "data": 0.012349722947682489
+        }
+      },
+      "B_final": {
+        "validation_equal_tag_normalized_MSE": 0.008719724797364888,
+        "MEM_phi_p_RMS_mV": 10.698870722199139,
+        "MEM_lambda_RMS": 1.1950593086734926,
+        "MEM_N2_RMS": 0.030959461805510315,
+        "CCL_O2_RMS": 0.03632450870005513,
+        "membrane_reconstructed_current_RMS_A_m2": 5928.56288686674,
+        "CGC_all1000_original_water_loss": 1019265.5986430448,
+        "CCL_MEM_N2_flux_jump_RMS_kg_m2_s": 1.455350752419515,
+        "fixed_original_physics": {
+          "PDE": 861750.3077877526,
+          "BC": 0.24614168333166564,
+          "interface": 726751486.2821876,
+          "data": 0.011943725332468841
+        }
+      }
+    }
+  },
+  "data_only_200_validation_relative_L2_percent": [
+    {
+      "region": "MEM",
+      "field": "phi_p",
+      "units": "V",
+      "error_RMS": 0.010819661959946972,
+      "relative_L2_percent": 29.67835255243083,
+      "amplitude_ratio": 0.46149198730915536,
+      "correlation": 0.7021376648752009
+    },
+    {
+      "region": "MEM",
+      "field": "lambda",
+      "units": "dimensionless",
+      "error_RMS": 1.2078645364816891,
+      "relative_L2_percent": 9.81828153729939,
+      "amplitude_ratio": 0.7981933776627176,
+      "correlation": 0.8527828401463509
+    },
+    {
+      "region": "CCL",
+      "field": "Y_O2",
+      "units": "kg/kg",
+      "error_RMS": 0.036564725604678036,
+      "relative_L2_percent": 44.00101578145898,
+      "amplitude_ratio": 0.46184818288000773,
+      "correlation": 0.5748488846886817
+    },
+    {
+      "region": "CGC",
+      "field": "T",
+      "units": "K",
+      "error_RMS": 1.038354327099629,
+      "relative_L2_percent": 0.3103245349787567,
+      "amplitude_ratio": 0.30404370051475044,
+      "correlation": 0.741497176212418
+    },
+    {
+      "region": "CGC",
+      "field": "W",
+      "units": "dimensionless",
+      "error_RMS": 0.006733488155653207,
+      "relative_L2_percent": 3.5178087400537557,
+      "amplitude_ratio": 0.7839549303756742,
+      "correlation": 0.9798648019140086
+    },
+    {
+      "region": "AGC",
+      "field": "W",
+      "units": "dimensionless",
+      "error_RMS": 0.07581477532633271,
+      "relative_L2_percent": 13.256270889541172,
+      "amplitude_ratio": 0.5002677155770523,
+      "correlation": -0.9597845541742933
+    },
+    {
+      "region": "CGC",
+      "field": "p_gauge",
+      "units": "Pa",
+      "error_RMS": 0.025798352420187104,
+      "relative_L2_percent": 1.778294500195058,
+      "amplitude_ratio": 0.9950914365833505,
+      "correlation": 0.9991861122246066
+    },
+    {
+      "region": "MEM",
+      "field": "Y_N2",
+      "units": "kg/kg",
+      "error_RMS": 0.030465686479867533,
+      "relative_L2_percent": 7.867234834049378,
+      "amplitude_ratio": 0.9124965158827837,
+      "correlation": 0.9898103318371817
+    }
+  ],
+  "held_out_final_test_labels_used": false,
+  "reproducibility": {
+    "private_PEMFC_reproduction_available": false,
+    "public_code": "Independent architecture/training scaffold and manufactured diffusion demo.",
+    "public_Torch_execution_during_packaging": false
+  },
+  "data_only_200_validation_velocity_relative_L2_percent": [
+    {
+      "region": "AGC",
+      "relative_L2_percent": 41.2253733434247,
+      "vector_error_RMS_m_s": 0.20249713897294808
+    },
+    {
+      "region": "CGC",
+      "relative_L2_percent": 50.8647098817233,
+      "vector_error_RMS_m_s": 0.1962318895603916
+    }
+  ]
+}
