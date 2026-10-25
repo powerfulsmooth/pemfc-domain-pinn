@@ -78,7 +78,6 @@ locally during packaging. [Verification status](docs/verification.md).
 
 | Public | Withheld |
 |---|---|
-| Selected aggregate metrics and plots | Original Fluent CAS/DAT/UDF |
 | Architecture and methodological explanation | Mesh, cell/face fields and CFD contours |
 | Generic training code and synthetic demo | UDF-transcribed properties, sources and lookup tables |
 | References and limitations | Checkpoints, private decoder and case configuration |
